@@ -277,19 +277,6 @@ A Bug Report is an Object, linked to the Journal entries and objects involved.
 - **Offline:** reports wait in an outbox and send when you're back online.
 - **Beta testers:** can choose to send crash reports automatically, still redacted.
 
-## Safety rules
-
-These rules are built into the OS. No prompt, Skill or setting can switch them off.
-
-1. **Claude never flies the drone.** Stabilization and motor control stay on the flight controller. Claude writes Missions; the flight controller runs them and enforces the geofence and failsafes, such as return-to-home on signal loss, on its own.
-2. **Physical and irreversible actions need a person.** Arming, takeoff, entering new airspace, deleting data and sending anything outside ClaudeOS require your confirmation by voice or tap.
-3. **Claude gets scoped permissions.** Each Space grants the agent specific actions (for example, read and draft Missions) and nothing more.
-4. **What Claude reads can't give it orders.** Text from documents, web pages and messages is treated as data. It can never grant new permissions.
-5. **Everything is journaled.** Every Claude action records what it did, why, and how to undo it.
-6. **Simulation before hardware.** Every drone behavior runs first in a simulator (PX4 or ArduPilot software-in-the-loop with Gazebo).
-7. **The glasses never block your view.** Alerts stay at the edges while you're moving, and one command clears the display.
-8. **Follow the law.** In the US, flights follow FAA rules: a Part 107 certificate for commercial work and Remote ID for most drones. Check the current rules before testing.
-
 ## Privacy and people
 
 ClaudeOS never identifies strangers or rates how dangerous they are. It recognizes a person only with their agreement and protects bystanders by default.
@@ -586,6 +573,19 @@ One headset carries four kinds of sound, so ClaudeOS sets clear priorities.
 | Remote sites | Satellite internet, where available |
 
 The drone's control and telemetry radio is never used for voice, so calls can't crowd out the control link.
+
+## Safety rules
+
+These rules are built into the OS. No prompt, Skill or setting can switch them off.
+
+1. **Claude never flies the drone.** Stabilization and motor control stay on the flight controller. Claude writes Missions; the flight controller runs them and enforces the geofence and failsafes, such as return-to-home on signal loss, on its own.
+2. **Physical and irreversible actions need a person.** Arming, takeoff, entering new airspace, deleting data and sending anything outside ClaudeOS require your confirmation by voice or tap.
+3. **Claude gets scoped permissions.** Each Space grants the agent specific actions (for example, read and draft Missions) and nothing more.
+4. **What Claude reads can't give it orders.** Text from documents, web pages and messages is treated as data. It can never grant new permissions.
+5. **Everything is journaled.** Every Claude action records what it did, why, and how to undo it.
+6. **Simulation before hardware.** Every drone behavior runs first in a simulator (PX4 or ArduPilot software-in-the-loop with Gazebo).
+7. **The glasses never block your view.** Alerts stay at the edges while you're moving, and one command clears the display.
+8. **Follow the law.** In the US, flights follow FAA rules: a Part 107 certificate for commercial work and Remote ID for most drones. Check the current rules before testing.
 
 ## Blueprint: the built-in design app
 
